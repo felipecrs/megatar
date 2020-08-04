@@ -41,16 +41,16 @@ export default class SaveImage extends Command {
 
     const tasks = new Listr([
       {
-        title: `pulling image '${image}'`,
+        title: `pulling image \`${image}\``,
         task: () => execa.command(`docker pull ${args.image}`),
       },
       {
-        title: `tagging with '${newImage}'`,
+        title: `tagging with \`${newImage}\``,
         enabled: () => image !== newImage,
         task: () => execa.command(`docker tag ${image} ${newImage}`),
       },
       {
-        title: `saving '${newImage}' and compressing to '${newImageFile}'`,
+        title: `saving \`${newImage}\` and compressing to \`${newImageFile}\``,
         task: () =>
           execa.command(`docker save ${newImage} | gzip > ${newImageFile}`, {
             shell: "bash",
