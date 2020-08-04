@@ -59,9 +59,9 @@ export default class SaveImage extends Command {
     ]);
 
     try {
-      await tasks.run()
+      await tasks.run();
     } catch (error) {
-      this.exit(1)
+      this.exit(1);
     }
   }
 }
