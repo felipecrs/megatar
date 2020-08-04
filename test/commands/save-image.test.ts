@@ -4,11 +4,10 @@ import * as execa from "execa";
 describe("save-image", () => {
   test
     .stdout()
-    .stderr()
     .command(["save-image", "hello-world"])
     .it("saves hello-world image", (ctx) => {
-      expect(ctx.stderr).to.contain(
-        "Saving 'hello-world:latest' and compressing to 'hello-world-latest.tgz'... done"
+      expect(ctx.stdout).to.contain(
+        "saving 'hello-world:latest' and compressing to 'hello-world-latest.tgz'"
       );
       expect(
         execa.commandSync("docker load -i hello-world-latest.tgz").stdout
@@ -20,10 +19,7 @@ describe("save-image", () => {
     .stderr()
     .command(["save-image", "hello-world:123456"])
     .exit(1)
-    .catch((error) =>
-      expect(error.message).to.contain(
-        "Command failed with exit code 1: docker pull hello-world:123456"
-      )
-    )
-    .it("fails with a unexisting image");
+    .it("fails with a unexisting image", (ctx) => {
+      expect(ctx.stdout).to.contain('Error response from daemon: manifest for hello-world:123456 not found: manifest unknown: manifest unknown')
+    });
 });
