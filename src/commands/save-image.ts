@@ -1,6 +1,7 @@
 import { Command, flags } from "@oclif/command";
-import * as execa from "execa";
 import * as Listr from "listr";
+import * as chalk from "chalk";
+import Image from "../model/image";
 
 export default class SaveImage extends Command {
   static description = "save a docker image to a tgz file";
@@ -28,33 +29,28 @@ export default class SaveImage extends Command {
   async run() {
     const { args, flags } = this.parse(SaveImage);
 
-    const imageName: string = args.image.split(":")[0];
-    const imageTag: string = args.image.split(":")[1] || "latest";
-    const image = `${imageName}:${imageTag}`;
-    const baseImageName = imageName.split("/").reverse()[0];
-    const newImageName: string = flags["discard-parents"]
-      ? baseImageName
-      : imageName;
-    const newImageTag: string = flags["new-tag"] || imageTag;
-    const newImage = `${newImageName}:${newImageTag}`;
-    const newImageFile = `${baseImageName}-${newImageTag}.tgz`;
+    const originalImage = Image.inferFromString(args.image);
+    const newImage = new Image(
+      originalImage.name,
+      flags["new-tag"] || originalImage.tag,
+      flags["discard-parents"] ? undefined : originalImage.repository
+    );
 
     const tasks = new Listr([
       {
-        title: `pulling image \`${image}\``,
-        task: () => execa.command(`docker pull ${args.image}`),
+        title: `pulling image ${chalk.blue(originalImage)}`,
+        task: () => originalImage.pull(),
       },
       {
-        title: `tagging with \`${newImage}\``,
-        enabled: () => image !== newImage,
-        task: () => execa.command(`docker tag ${image} ${newImage}`),
+        title: `tagging with ${chalk.blue(newImage)}`,
+        enabled: () => originalImage.toString() !== newImage.toString(),
+        task: () => originalImage.runTag(newImage),
       },
       {
-        title: `saving \`${newImage}\` and compressing to \`${newImageFile}\``,
-        task: () =>
-          execa.command(`docker save ${newImage} | gzip > ${newImageFile}`, {
-            shell: "bash",
-          }),
+        title: `saving ${chalk.blue(newImage)} and compressing to ${chalk.blue(
+          newImage.filename
+        )}`,
+        task: () => newImage.save(),
       },
     ]);
 

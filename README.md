@@ -28,30 +28,32 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`megatar hello [FILE]`](#megatar-hello-file)
+* [`megatar autocomplete [SHELL]`](#megatar-autocomplete-shell)
 * [`megatar help [COMMAND]`](#megatar-help-command)
-* [`megatar save-image [FILE]`](#megatar-save-image-file)
-* [`megatar update-config [CONFIG-FILE]`](#megatar-update-config-config-file)
+* [`megatar save-image IMAGE`](#megatar-save-image-image)
 
-## `megatar hello [FILE]`
+## `megatar autocomplete [SHELL]`
 
-describe the command here
+display autocomplete installation instructions
 
 ```
 USAGE
-  $ megatar hello [FILE]
+  $ megatar autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
 
-EXAMPLE
-  $ megatar hello
-  hello world from ./src/hello.ts!
+EXAMPLES
+  $ megatar autocomplete
+  $ megatar autocomplete bash
+  $ megatar autocomplete zsh
+  $ megatar autocomplete --refresh-cache
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/felipecassiors/megatar/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.0/src/commands/autocomplete/index.ts)_
 
 ## `megatar help [COMMAND]`
 
@@ -70,35 +72,25 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0/src/commands/help.ts)_
 
-## `megatar save-image [FILE]`
+## `megatar save-image IMAGE`
 
-describe the command here
+save a docker image to a tgz file
 
 ```
 USAGE
-  $ megatar save-image [FILE]
+  $ megatar save-image IMAGE
+
+ARGUMENTS
+  IMAGE  the docker image to save
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help              show CLI help
+  -t, --new-tag=new-tag   the new tag to write in the image
+  --[no-]discard-parents  whether to discard the repository and registry fields or not
+
+EXAMPLE
+  $ megatar save-image hello-world
 ```
 
 _See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v0.0.0/src/commands/save-image.ts)_
-
-## `megatar update-config [CONFIG-FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ megatar update-config [CONFIG-FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/update-config.ts](https://github.com/felipecassiors/megatar/blob/v0.0.0/src/commands/update-config.ts)_
 <!-- commandsstop -->

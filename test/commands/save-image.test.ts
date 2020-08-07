@@ -2,24 +2,28 @@ import { expect, test } from "@oclif/test";
 import * as execa from "execa";
 
 describe("save-image", () => {
+  const imageWithoutTag = "hello-world";
   test
     .stdout()
-    .command(["save-image", "hello-world"])
-    .it("saves hello-world image", (ctx) => {
+    .command(["save-image", imageWithoutTag])
+    .it("saves an image without tag", (ctx) => {
       expect(ctx.stdout).to.contain(
-        "saving 'hello-world:latest' and compressing to 'hello-world-latest.tgz'"
+        `saving ${imageWithoutTag}:latest and compressing to ${imageWithoutTag}-latest.tgz`
       );
       expect(
-        execa.commandSync("docker load -i hello-world-latest.tgz").stdout
-      ).to.contain("Loaded image: hello-world:latest");
+        execa.commandSync(`docker load -i ${imageWithoutTag}-latest.tgz`).stdout
+      ).to.contain(`Loaded image: ${imageWithoutTag}:latest`);
     });
 
+  const unexistingImage = "hello-world:123456";
   test
     .stdout()
     .stderr()
-    .command(["save-image", "hello-world:123456"])
+    .command(["save-image", unexistingImage])
     .exit(1)
-    .it("fails with a unexisting image", (ctx) => {
-      expect(ctx.stdout).to.contain('Error response from daemon: manifest for hello-world:123456 not found: manifest unknown: manifest unknown')
+    .it("fails when saving an unexisting image", (ctx) => {
+      expect(ctx.stdout).to.contain(
+        `Error response from daemon: manifest for ${unexistingImage} not found: manifest unknown: manifest unknown`
+      );
     });
 });
