@@ -14,7 +14,7 @@ export default class SaveImage extends Command {
       char: "t",
       description: "the new tag to write in the image",
     }),
-    "discard-parents": flags.boolean({
+    "discard-repository": flags.boolean({
       allowNo: true,
       description:
         "whether to discard the repository and registry fields or not",
@@ -33,7 +33,7 @@ export default class SaveImage extends Command {
     const newImage = new Image(
       originalImage.name,
       flags["new-tag"] || originalImage.tag,
-      flags["discard-parents"] ? undefined : originalImage.repository
+      flags["discard-repository"] ? undefined : originalImage.repository
     );
 
     const tasks = new Listr([
