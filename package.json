@@ -20,6 +20,7 @@
     "tslib": "^1.13.0"
   },
   "devDependencies": {
+    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "@oclif/dev-cli": "^1.22.2",
     "@oclif/test": "^1.2.6",
     "@types/chai": "^4.2.12",
@@ -75,5 +76,8 @@
     "version": "oclif-dev readme && git add README.md",
     "release": "semantic-release"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "release": {
+    "extends": "@jedmao/semantic-release-npm-github-config"
+  }
 }
