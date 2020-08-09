@@ -1,29 +1,34 @@
-import { expect, test } from "@oclif/test";
 import * as execa from "execa";
 
+const bin = `${process.cwd()}/bin/run`;
+
 describe("save-image", () => {
-  const imageWithoutTag = "hello-world";
-  test
-    .stdout()
-    .command(["save-image", imageWithoutTag])
-    .it("saves an image without tag", (ctx) => {
-      expect(ctx.stdout).to.contain(
-        `saving ${imageWithoutTag}:latest and compressing to ${imageWithoutTag}-latest.tgz`
-      );
-      expect(
-        execa.commandSync(`docker load -i ${imageWithoutTag}-latest.tgz`).stdout
-      ).to.contain(`Loaded image: ${imageWithoutTag}:latest`);
+  it("saves an image without tag", async () => {
+    const image = "hello-world";
+
+    const result = await execa.command(`${bin} save-image ${image}`);
+    expect(result.stdout).toContain(
+      `saving ${image}:latest and compressing to ${image}-latest.tgz`
+    );
+    expect(result.exitCode).toBe(0);
+
+    const loadResult = await execa.command(
+      `docker load -i ${image}-latest.tgz`
+    );
+    expect(loadResult.stdout).toContain(`Loaded image: ${image}:latest`);
+    expect(loadResult.exitCode).toBe(0);
+  });
+
+  it("fails when saving an unexisting image", async () => {
+    const image = "hello-world:123456";
+
+    const result = await execa.command(`${bin} save-image ${image}`, {
+      reject: false,
     });
 
-  const unexistingImage = "hello-world:123456";
-  test
-    .stdout()
-    .stderr()
-    .command(["save-image", unexistingImage])
-    .exit(1)
-    .it("fails when saving an unexisting image", (ctx) => {
-      expect(ctx.stdout).to.contain(
-        `Error response from daemon: manifest for ${unexistingImage} not found: manifest unknown: manifest unknown`
-      );
-    });
+    expect(result.stdout).toContain(
+      `Error response from daemon: manifest for ${image} not found: manifest unknown: manifest unknown`
+    );
+    expect(result.exitCode).toBe(1);
+  });
 });
