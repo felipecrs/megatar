@@ -38,8 +38,7 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - name: Release
-        run: npm run release
+      - run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
