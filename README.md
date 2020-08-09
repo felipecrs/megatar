@@ -19,7 +19,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/0.0.0 linux-x64 node-v12.18.3
+megatar/1.0.2 linux-x64 node-v12.18.3
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -84,13 +84,13 @@ ARGUMENTS
   IMAGE  the docker image to save
 
 OPTIONS
-  -h, --help              show CLI help
-  -t, --new-tag=new-tag   the new tag to write in the image
-  --[no-]discard-parents  whether to discard the repository and registry fields or not
+  -h, --help                 show CLI help
+  -t, --new-tag=new-tag      the new tag to write in the image
+  --[no-]discard-repository  whether to discard the repository and registry fields or not
 
 EXAMPLE
   $ megatar save-image hello-world
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v0.0.0/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.2/src/commands/save-image.ts)_
 <!-- commandsstop -->

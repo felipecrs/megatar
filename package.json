@@ -1,7 +1,7 @@
 {
   "name": "megatar",
   "description": "Create full offline Helm chart packages.",
-  "version": "0.0.0-development",
+  "version": "1.0.2",
   "author": "Felipe Santos @felipecassiors",
   "bin": {
     "megatar": "./bin/run"
