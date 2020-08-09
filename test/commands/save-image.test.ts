@@ -19,6 +19,25 @@ describe("save-image", () => {
     expect(loadResult.exitCode).toBe(0);
   });
 
+  it("saves an image with a different tag", async () => {
+    const image = "hello-world";
+    const newTag = "test";
+
+    const result = await execa.command(
+      `${bin} save-image ${image} --new-tag ${newTag}`
+    );
+    expect(result.stdout).toContain(
+      `saving ${image}:${newTag} and compressing to ${image}-${newTag}.tgz`
+    );
+    expect(result.exitCode).toBe(0);
+
+    const loadResult = await execa.command(
+      `docker load -i ${image}-${newTag}.tgz`
+    );
+    expect(loadResult.stdout).toContain(`Loaded image: ${image}:${newTag}`);
+    expect(loadResult.exitCode).toBe(0);
+  });
+
   it("fails when saving an unexisting image", async () => {
     const image = "hello-world:123456";
 
