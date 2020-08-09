@@ -4,10 +4,11 @@
 
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
-    "esbenp.prettier-vscode",
-    "ms-vscode.node-debug2",
     "dbaeumer.vscode-eslint",
-    "hbenl.vscode-mocha-test-adapter"
+    "esbenp.prettier-vscode",
+    "Orta.vscode-jest",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "eg2.vscode-npm-script"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
