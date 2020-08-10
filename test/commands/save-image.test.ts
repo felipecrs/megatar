@@ -1,12 +1,12 @@
+import { getBinPathSync } from "get-bin-path";
 import * as execa from "execa";
 
-const bin = `${process.cwd()}/bin/run`;
+const bin = getBinPathSync();
 
-const runBinary = async (args: string) => {
-  return execa.command(`${bin} ${args}`, {
+const runBinary = async (args: string) =>
+  execa.command(`${bin} ${args}`, {
     reject: false,
   });
-};
 
 describe("save-image", () => {
   it("saves an image without tag", async () => {
