@@ -31,6 +31,7 @@
     "@types/shelljs": "^0.8.8",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
+    "conventional-changelog-conventionalcommits": "^4.3.1",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "globby": "^11.0.1",
@@ -51,7 +52,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/felipecassiors/megatar",
+  "homepage": "https://github.com/felipecassiors/megatar#readme",
   "keywords": [
     "oclif"
   ],
@@ -75,36 +76,5 @@
     "version": "oclif-dev readme && git add README.md",
     "release": "semantic-release"
   },
-  "types": "lib/index.d.ts",
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/npm",
-        {
-          "tarballDir": "dist"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "README.md",
-            "CHANGELOG.md",
-            "package.json",
-            "package-lock.json",
-            "npm-shrinkwrap.json"
-          ]
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": "dist/*.tgz"
-        }
-      ]
-    ]
-  }
+  "types": "lib/index.d.ts"
 }
