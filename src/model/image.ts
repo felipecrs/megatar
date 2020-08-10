@@ -17,10 +17,9 @@ export default class Image {
     const name = imageWithoutTag.substring(
       imageWithoutTag.lastIndexOf("/") + 1
     );
-    const repository = imageWithoutTag.substring(
-      0,
-      imageWithoutTag.lastIndexOf("/")
-    );
+    const repository =
+      imageWithoutTag.substring(0, imageWithoutTag.lastIndexOf("/")) ||
+      undefined;
     return new Image(name, tag, repository);
   }
 

@@ -74,6 +74,8 @@
     "posttest": "eslint . --ext .ts",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc jest",
+    "test:unit": "jest --testPathIgnorePatterns test/commands ",
+    "test:e2e": "jest --testPathPattern test/commands",
     "version": "oclif-dev readme && git add README.md",
     "release": "semantic-release"
   },
