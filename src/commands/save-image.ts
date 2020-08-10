@@ -6,7 +6,10 @@ import Image from "../model/image";
 export default class SaveImage extends Command {
   static description = "save a docker image to a tgz file";
 
-  static examples = ["$ megatar save-image hello-world"];
+  static examples = [
+    "$ megatar save-image hello-world",
+    "$ megatar save-image hello-world --new-tag test",
+  ];
 
   static flags = {
     help: flags.help({ char: "h" }),
