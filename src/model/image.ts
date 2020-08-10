@@ -11,7 +11,7 @@ export default class Image {
     this.filename = `${this.name}-${this.tag}.tgz`;
   }
 
-  static inferFromString(image: string) {
+  static inferFromString(image: string): Image {
     const imageWithoutTag = image.split(":")[0];
     const tag = image.split(":")[1] || "latest";
     const name = imageWithoutTag.substring(
@@ -30,11 +30,13 @@ export default class Image {
     }`;
   };
 
-  pull = () => execa.command(`docker pull ${this}`);
+  pull = async (): Promise<execa.ExecaReturnValue> =>
+    execa.command(`docker pull ${this}`);
 
-  runTag = (newImage: Image) => execa.command(`docker tag ${this} ${newImage}`);
+  runTag = async (newImage: Image): Promise<execa.ExecaReturnValue> =>
+    execa.command(`docker tag ${this} ${newImage}`);
 
-  save = () =>
+  save = async (): Promise<execa.ExecaReturnValue> =>
     execa.command(`docker save ${this} | gzip > ${this.filename}`, {
       shell: "bash",
     });

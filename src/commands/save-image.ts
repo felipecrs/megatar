@@ -26,7 +26,7 @@ export default class SaveImage extends Command {
     { name: "image", required: true, description: "the docker image to save" },
   ];
 
-  async run() {
+  async run(): Promise<void> {
     const { args, flags } = this.parse(SaveImage);
 
     const originalImage = Image.inferFromString(args.image);
@@ -39,18 +39,18 @@ export default class SaveImage extends Command {
     const tasks = new Listr([
       {
         title: `pulling image ${chalk.blue(originalImage)}`,
-        task: () => originalImage.pull(),
+        task: async () => originalImage.pull(),
       },
       {
         title: `tagging with ${chalk.blue(newImage)}`,
         enabled: () => originalImage.toString() !== newImage.toString(),
-        task: () => originalImage.runTag(newImage),
+        task: async () => originalImage.runTag(newImage),
       },
       {
         title: `saving ${chalk.blue(newImage)} and compressing to ${chalk.blue(
           newImage.filename
         )}`,
-        task: () => newImage.save(),
+        task: async () => newImage.save(),
       },
     ]);
 
