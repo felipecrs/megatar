@@ -88,8 +88,9 @@ OPTIONS
   -t, --new-tag=new-tag      the new tag to write in the image
   --[no-]discard-repository  whether to discard the repository and registry fields or not
 
-EXAMPLE
+EXAMPLES
   $ megatar save-image hello-world
+  $ megatar save-image hello-world --new-tag test
 ```
 
 _See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.2/src/commands/save-image.ts)_
