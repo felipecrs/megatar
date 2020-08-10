@@ -69,7 +69,7 @@
   "repository": "felipecassiors/megatar",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
-    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "posttest": "eslint . --ext .ts",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc jest",
     "version": "oclif-dev readme && git add README.md",
