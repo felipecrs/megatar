@@ -17,7 +17,6 @@
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "ms-azuretools.vscode-docker",
-    "ms-kubernetes-tools.vscode-kubernetes-tools",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "Orta.vscode-jest",
@@ -32,7 +31,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install && npm link && .devcontainer/setup-autocomplete.sh",
 
   // Uncomment when using a ptrace-based debugger like C++, Go, and Rust.
   // "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
