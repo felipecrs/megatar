@@ -1,19 +1,30 @@
 {
-  "name": "Ubuntu & Node & Docker",
+  "name": "Megatar",
   "dockerFile": "Dockerfile",
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
   ],
-
+  // Use this environment variable to perform docker volume mountings on terminal.
   "remoteEnv": {
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
-
+  // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+  "overrideCommand": false,
+  "containerUser": "vscode",
+  // See: https://github.com/microsoft/vscode-dev-containers/issues/490
+  "containerEnv": {
+    "USER": "vscode"
+  },
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "npm install && npm link && .devcontainer/setup-autocomplete.sh",
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+  // Uncomment when using a ptrace-based debugger like C++, Go, and Rust.
+  // "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
   // Set *default* container specific settings.json values on container create.
   "settings": {
     "terminal.integrated.shell.linux": "/bin/zsh"
   },
-
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "ms-azuretools.vscode-docker",
@@ -25,22 +36,5 @@
     "eamodio.gitlens",
     "mhutchie.git-graph",
     "github.vscode-pull-request-github"
-  ],
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm install && npm link && .devcontainer/setup-autocomplete.sh",
-
-  // Uncomment when using a ptrace-based debugger like C++, Go, and Rust.
-  // "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-
-  // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-  "overrideCommand": false,
-  "containerUser": "vscode",
-  // See: https://github.com/microsoft/vscode-dev-containers/issues/490
-  "containerEnv": {
-    "USER": "vscode"
-  }
+  ]
 }
