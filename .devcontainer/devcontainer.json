@@ -38,5 +38,9 @@
 
   // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
   "overrideCommand": false,
-  "remoteUser": "vscode"
+  "containerUser": "vscode",
+  // See: https://github.com/microsoft/vscode-dev-containers/issues/490
+  "containerEnv": {
+    "USER": "vscode"
+  }
 }
