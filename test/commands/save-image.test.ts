@@ -1,5 +1,7 @@
 import { getBinPathSync } from "get-bin-path";
 import * as execa from "execa";
+import * as shell from "shelljs";
+import * as tmp from "tmp";
 
 const bin = getBinPathSync();
 
@@ -8,7 +10,22 @@ const runBinary = async (args: string) =>
     reject: false,
   });
 
+beforeAll(() => {
+  process.env = Object.assign(process.env, { FORCE_COLOR: 0 });
+});
+
 describe("save-image", () => {
+  let dir: tmp.DirResult;
+
+  beforeEach(async () => {
+    dir = tmp.dirSync({ unsafeCleanup: true });
+    shell.cd(dir.name);
+  });
+
+  afterEach(async () => {
+    dir.removeCallback();
+  });
+
   it("saves an image without tag", async () => {
     const image = "hello-world";
 
