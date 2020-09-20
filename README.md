@@ -1,4 +1,4 @@
-megatar
+Megatar
 =======
 
 Create full offline Helm chart packages.
@@ -12,21 +12,25 @@ Create full offline Helm chart packages.
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
 ```sh-session
 $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.0.2 linux-x64 node-v12.18.3
+megatar/1.0.2 linux-x64 node-v12.18.4
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
 ...
 ```
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
 * [`megatar autocomplete [SHELL]`](#megatar-autocomplete-shell)
 * [`megatar help [COMMAND]`](#megatar-help-command)
@@ -88,9 +92,8 @@ OPTIONS
   -t, --new-tag=new-tag      the new tag to write in the image
   --[no-]discard-repository  whether to discard the repository and registry fields or not
 
-EXAMPLES
+EXAMPLE
   $ megatar save-image hello-world
-  $ megatar save-image hello-world --new-tag test
 ```
 
 _See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.2/src/commands/save-image.ts)_
