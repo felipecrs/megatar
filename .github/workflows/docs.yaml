@@ -18,9 +18,13 @@ jobs:
       - run: |
           cd website
           npm ci
-      - run: |
+      - name: build website
+        run: |
           cd website
+          # This is a work around due to
+          # https://github.com/tgreyuk/typedoc-plugin-markdown/issues/151
           touch sidebars.js
+          npm run build
           npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
