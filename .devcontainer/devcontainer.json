@@ -9,7 +9,7 @@
   },
   "overrideCommand": false,
   "containerUser": "vscode",
-  "postCreateCommand": "npm install --link && .devcontainer/setup-autocomplete.sh",
+  "postCreateCommand": "npm install --link && .devcontainer/setup-autocomplete.sh && (cd website && npm install)",
   "extensions": [
     "editorconfig.editorconfig",
     "ms-azuretools.vscode-docker",
