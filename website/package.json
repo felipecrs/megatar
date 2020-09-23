@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "scripts/import-readme.sh && docusaurus start",
-    "build": "docusaurus build",
+    "build": "scripts/import-readme.sh && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve"

@@ -3,6 +3,8 @@ name: docs
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
   deploy:
@@ -14,19 +16,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: npm ci
-      - run: |
-          cd website
-          npm ci
-      - name: build website
-        run: |
-          cd website
-          # This is a work around due to
-          # https://github.com/tgreyuk/typedoc-plugin-markdown/issues/151
-          touch sidebars.js
-          npm run build
-          npm run build
-      - name: Deploy
+      - name: npm install on project
+        run: npm ci
+      - name: npm install on website
+        run: npm ci
+        working-directory: ./website
+      - run: npm run build
+        working-directory: ./website
+      - if: github.ref == 'refs/heads/master'
+        name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
