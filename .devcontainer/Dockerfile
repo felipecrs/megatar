@@ -2,21 +2,23 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
 
 # script-library options
-ARG SCRIPT_LIBRARY_URL=https://raw.githubusercontent.com/microsoft/vscode-dev-containers/master/script-library
+ARG SCRIPT_LIBRARY_COMMIT=master
 
-# node options
+# script-library's node options
 ENV NVM_DIR="/usr/local/share/nvm"
 ENV NVM_SYMLINK_CURRENT=true \
   PATH=${NVM_DIR}/current/bin:${PATH}
 
-# Install node
-RUN bash -c "$(curl -fsSL "$SCRIPT_LIBRARY_URL/node-debian.sh")" -- "${NVM_DIR}" \
+# Install stuff using script-library's scripts
+RUN SCRIPT_LIBRARY_URL=https://raw.githubusercontent.com/microsoft/vscode-dev-containers/${SCRIPT_LIBRARY_COMMIT}/script-library \
+  # Install node
+  && bash -c "$(curl -fsSL "$SCRIPT_LIBRARY_URL/node-debian.sh")" -- "${NVM_DIR}" \
   # Install docker
   && bash -c "$(curl -fsSL "$SCRIPT_LIBRARY_URL/docker-debian.sh")" \
   # Clean up
   && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
-# docker options
+# script-library's docker options
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
 
