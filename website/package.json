@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "scripts/import-readme.sh && docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -31,8 +31,8 @@
     ]
   },
   "devDependencies": {
-    "docusaurus-plugin-typedoc": "^0.1.1",
-    "typedoc": "^0.19.1",
-    "typedoc-plugin-markdown": "^3.0.0"
+    "docusaurus-plugin-typedoc": "^0.2.0",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.0.2"
   }
 }

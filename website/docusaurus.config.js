@@ -34,7 +34,6 @@ module.exports = {
         docs: {
           path: '../docs',
           routeBasePath: '/',
-          homePageId: "api/index",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: `${githubUrl}/edit/master/website`,
         },
@@ -50,7 +49,8 @@ module.exports = {
       {
         inputFiles: ['../src/'],
         docsRoot: '../docs',
-        mode: "file"
+        mode: "file",
+        readme: "none"
       },
     ],
   ],
