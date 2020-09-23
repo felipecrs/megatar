@@ -1,6 +1,9 @@
 {
   "name": "Megatar",
   "dockerFile": "Dockerfile",
+  "runArgs": [
+    "--init"
+  ],
   "mounts": [
     "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
   ],
@@ -9,7 +12,7 @@
   },
   "overrideCommand": false,
   "containerUser": "vscode",
-  "postCreateCommand": "npm install --link && .devcontainer/setup-autocomplete.sh && (cd website && npm install)",
+  "postCreateCommand": ".devcontainer/post-create.sh",
   "extensions": [
     "editorconfig.editorconfig",
     "ms-azuretools.vscode-docker",
