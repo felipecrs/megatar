@@ -1,3 +1,13 @@
+### [1.0.3](https://github.com/felipecassiors/megatar/compare/v1.0.2...v1.0.3) (2020-12-22)
+
+
+### Dependencies
+
+* **deps:** bump bl from 4.0.2 to 4.0.3 ([3bc0f9f](https://github.com/felipecassiors/megatar/commit/3bc0f9f360c37cb1b852290432b226ba7a368eb6))
+* **deps:** bump ini from 1.3.5 to 1.3.8 ([#96](https://github.com/felipecassiors/megatar/issues/96)) ([dff8bf9](https://github.com/felipecassiors/megatar/commit/dff8bf9f377fb9cfa8af97678e59fa755dd6648d))
+* **deps:** bump node-fetch from 2.6.0 to 2.6.1 ([2071136](https://github.com/felipecassiors/megatar/commit/20711367a046564b995b7d7811544acb102ccb65))
+* **deps:** bump tslib from 2.0.1 to 2.0.2 ([#73](https://github.com/felipecassiors/megatar/issues/73)) ([c5874c1](https://github.com/felipecassiors/megatar/commit/c5874c1b7c99323961571fa72860ea7ae2c5e188))
+
 ## [1.0.2](https://github.com/felipecassiors/megatar/compare/v1.0.1...v1.0.2) (2020-08-09)
 
 

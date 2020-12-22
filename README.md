@@ -21,7 +21,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.0.2 linux-x64 node-v12.18.4
+megatar/1.0.3 linux-x64 node-v12.20.0
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -57,7 +57,7 @@ EXAMPLES
   $ megatar autocomplete --refresh-cache
 ```
 
-_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.0/src/commands/autocomplete/index.ts)_
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.1/src/commands/autocomplete/index.ts)_
 
 ## `megatar help [COMMAND]`
 
@@ -74,7 +74,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.1/src/commands/help.ts)_
 
 ## `megatar save-image IMAGE`
 
@@ -97,5 +97,5 @@ EXAMPLES
   $ megatar save-image hello-world --new-tag test
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.2/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.3/src/commands/save-image.ts)_
 <!-- commandsstop -->
