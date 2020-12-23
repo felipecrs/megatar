@@ -1,3 +1,11 @@
+### [1.0.4](https://github.com/felipecassiors/megatar/compare/v1.0.3...v1.0.4) (2020-12-23)
+
+
+### Dependencies
+
+* **deps:** bump @oclif/plugin-autocomplete from 0.2.1 to 0.3.0 ([#101](https://github.com/felipecassiors/megatar/issues/101)) ([00df796](https://github.com/felipecassiors/megatar/commit/00df796adea57897eb1695c29d0c4f97cf16a094))
+* **deps:** bump execa from 4.1.0 to 5.0.0 ([#104](https://github.com/felipecassiors/megatar/issues/104)) ([0a77463](https://github.com/felipecassiors/megatar/commit/0a77463a7b5705d60600f0ff4b5d77217c657a10))
+
 ### [1.0.3](https://github.com/felipecassiors/megatar/compare/v1.0.2...v1.0.3) (2020-12-22)
 
 
