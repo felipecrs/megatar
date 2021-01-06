@@ -1,3 +1,10 @@
+### [1.0.5](https://github.com/felipecassiors/megatar/compare/v1.0.4...v1.0.5) (2021-01-06)
+
+
+### Dependencies
+
+* **deps:** bump tslib from 2.0.3 to 2.1.0 ([#112](https://github.com/felipecassiors/megatar/issues/112)) ([1d1dc8c](https://github.com/felipecassiors/megatar/commit/1d1dc8cbdc52c2db19b4adf843a354d48a0df803))
+
 ### [1.0.4](https://github.com/felipecassiors/megatar/compare/v1.0.3...v1.0.4) (2020-12-23)
 
 
