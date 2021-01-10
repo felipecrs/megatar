@@ -72,6 +72,13 @@
   "engines": {
     "node": ">=10.0.0"
   },
+  "volta": {
+    "node": "14.15.4",
+    "npm": "7.4.0"
+  },
+  "workspaces": [
+    "website"
+  ],
   "files": [
     "/bin",
     "/lib",

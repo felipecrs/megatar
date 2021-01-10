@@ -11,6 +11,3 @@ bashrc=/etc/bash.bashrc
 printf '\n%s' 'megatar autocomplete -r &>/dev/null' | sudo tee -a $bashrc $zshrc
 printf '%s\n' "$(megatar autocomplete:script bash)" | sudo tee -a $bashrc
 printf '%s\n' "$(megatar autocomplete:script zsh)" | sudo tee -a $bashrc
-
-cd website/
-npm install
