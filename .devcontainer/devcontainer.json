@@ -1,6 +1,5 @@
 {
-  "name": "Megatar",
-  "dockerFile": "Dockerfile",
+  "image": "ghcr.io/felipecrs/devcontainer:github",
   "runArgs": [
     "--init"
   ],
@@ -11,8 +10,7 @@
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
   "overrideCommand": false,
-  "containerUser": "vscode",
-  "postCreateCommand": ".devcontainer/post-create.sh",
+  "postCreateCommand": ".devcontainer/post_create.sh",
   "extensions": [
     "editorconfig.editorconfig",
     "ms-azuretools.vscode-docker",
