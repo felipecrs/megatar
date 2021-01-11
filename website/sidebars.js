@@ -1,8 +1,8 @@
 module.exports = {
   sidebar: [
-    'index',
+    "index",
     {
-      'API': require('./typedoc-sidebar.js')
-    }
-  ]
+      API: require("./typedoc-sidebar.js"),
+    },
+  ],
 };

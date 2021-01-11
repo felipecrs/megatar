@@ -1,5 +1,5 @@
-const organizationName = "felipecrs"
-const projectName = "megatar"
+const organizationName = "felipecrs";
+const projectName = "megatar";
 const githubUrl = `https://github.com/${organizationName}/${projectName}`;
 
 module.exports = {
@@ -32,8 +32,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          path: '../docs',
-          routeBasePath: '/',
+          path: "../docs",
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: `${githubUrl}/edit/master/website`,
         },
@@ -45,12 +45,15 @@ module.exports = {
   ],
   plugins: [
     [
-      'docusaurus-plugin-typedoc',
+      "docusaurus-plugin-typedoc",
       {
-        inputFiles: ['../src/'],
-        docsRoot: '../docs',
+        inputFiles: ["../src/"],
+        docsRoot: "../docs",
         mode: "file",
-        readme: "none"
+        readme: "none",
+        sidebar: {
+          globalsLabel: "Table of Contents",
+        },
       },
     ],
   ],
