@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/felipecassiors/megatar/compare/v1.0.5...v1.1.0) (2021-01-12)
+
+
+### Features
+
+* **charts:** add list-images command ([#122](https://github.com/felipecassiors/megatar/issues/122)) ([34793d3](https://github.com/felipecassiors/megatar/commit/34793d374d1afd6dd12e818a26464f9de80e5eb8))
+
 ### [1.0.5](https://github.com/felipecassiors/megatar/compare/v1.0.4...v1.0.5) (2021-01-06)
 
 

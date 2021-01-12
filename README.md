@@ -21,7 +21,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.0.5 linux-x64 node-v12.20.0
+megatar/1.1.0 linux-x64 node-v12.20.0
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -33,6 +33,7 @@ USAGE
 
 <!-- commands -->
 * [`megatar autocomplete [SHELL]`](#megatar-autocomplete-shell)
+* [`megatar chart:list-images CHARTS`](#megatar-chartlist-images-charts)
 * [`megatar help [COMMAND]`](#megatar-help-command)
 * [`megatar save-image IMAGE`](#megatar-save-image-image)
 
@@ -58,6 +59,26 @@ EXAMPLES
 ```
 
 _See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.3.0/src/commands/autocomplete/index.ts)_
+
+## `megatar chart:list-images CHARTS`
+
+list the docker images found in a helm chart
+
+```
+USAGE
+  $ megatar chart:list-images CHARTS
+
+ARGUMENTS
+  CHARTS  the charts to find the images from
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ megatar chart list-images jenkins/jenkins
+```
+
+_See code: [src/commands/chart/list-images.ts](https://github.com/felipecassiors/megatar/blob/v1.1.0/src/commands/chart/list-images.ts)_
 
 ## `megatar help [COMMAND]`
 
@@ -97,5 +118,5 @@ EXAMPLES
   $ megatar save-image hello-world --new-tag test
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.5/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.1.0/src/commands/save-image.ts)_
 <!-- commandsstop -->
