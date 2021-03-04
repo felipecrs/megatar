@@ -1,7 +1,7 @@
 {
   "name": "megatar",
   "description": "Create full offline Helm chart packages.",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "author": "Felipe Santos @felipecassiors",
   "homepage": "https://github.com/felipecassiors/megatar#readme",
   "repository": "felipecassiors/megatar",
@@ -38,8 +38,8 @@
     "tslib": "^2.0.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@oclif/dev-cli": "^1.26.0",
     "@semantic-release/changelog": "^5.0.1",

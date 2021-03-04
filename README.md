@@ -21,7 +21,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.0.5 linux-x64 node-v12.20.0
+megatar/1.0.7 linux-x64 node-v12.21.0
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -74,7 +74,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.1/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
 ## `megatar save-image IMAGE`
 
@@ -97,5 +97,5 @@ EXAMPLES
   $ megatar save-image hello-world --new-tag test
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.5/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.7/src/commands/save-image.ts)_
 <!-- commandsstop -->

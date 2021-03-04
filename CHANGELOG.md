@@ -1,3 +1,17 @@
+### [1.0.7](https://github.com/felipecassiors/megatar/compare/v1.0.6...v1.0.7) (2021-03-04)
+
+
+### Dependencies
+
+* **deps:** bump @oclif/plugin-help from 3.2.1 to 3.2.2 ([#153](https://github.com/felipecassiors/megatar/issues/153)) ([322ec7e](https://github.com/felipecassiors/megatar/commit/322ec7e16f83c9ca247f41343de980c07dd268d5))
+
+### [1.0.6](https://github.com/felipecassiors/megatar/compare/v1.0.5...v1.0.6) (2021-03-04)
+
+
+### Dependencies
+
+* **deps:** bump tslib from 2.0.3 to 2.1.0 ([#145](https://github.com/felipecassiors/megatar/issues/145)) ([8128569](https://github.com/felipecassiors/megatar/commit/8128569bcffcf025562a216180199484ff84fb8c))
+
 ### [1.0.5](https://github.com/felipecassiors/megatar/compare/v1.0.4...v1.0.5) (2021-01-06)
 
 
