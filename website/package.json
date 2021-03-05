@@ -31,7 +31,8 @@
   "devDependencies": {
     "docusaurus-plugin-typedoc": "^0.4.1",
     "typedoc": "^0.19.2",
-    "typedoc-plugin-markdown": "~3.1.1"
+    "typedoc-plugin-markdown": "~3.1.1",
+    "typedoc-plugin-no-inherit": "^1.2.2"
   },
   "volta": {
     "extends": "../package.json"

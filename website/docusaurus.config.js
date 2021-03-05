@@ -1,10 +1,12 @@
 const organizationName = "felipecrs";
 const projectName = "megatar";
 const githubUrl = `https://github.com/${organizationName}/${projectName}`;
+const title = "Megatar";
+const description = require("../package.json").description;
 
 module.exports = {
-  title: "Megatar",
-  tagline: "Full offline Helm chart packages.",
+  title,
+  tagline: description,
   url: `https://${organizationName}.github.io/`,
   baseUrl: `/${projectName}/`,
   onBrokenLinks: "throw",
@@ -13,7 +15,7 @@ module.exports = {
   projectName,
   themeConfig: {
     navbar: {
-      title: "Megatar",
+      title,
       items: [
         {
           href: githubUrl,
@@ -51,6 +53,9 @@ module.exports = {
         docsRoot: "../docs",
         mode: "file",
         readme: "none",
+        name: `${title} API`,
+        includeVersion: true,
+        plugin: ["typedoc-plugin-no-inherit"],
         sidebar: {
           globalsLabel: "Table of Contents",
         },
