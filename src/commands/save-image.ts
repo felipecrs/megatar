@@ -3,9 +3,6 @@ import * as Listr from "listr";
 import * as chalk from "chalk";
 import Image from "../model/image";
 
-/**
- * @noInheritDoc
- */
 export default class SaveImage extends Command {
   static description = "save a docker image to a tgz file";
 

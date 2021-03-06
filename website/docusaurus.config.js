@@ -49,13 +49,16 @@ module.exports = {
     [
       "docusaurus-plugin-typedoc",
       {
-        inputFiles: ["../src/"],
+        entryPoints: ["../src/"],
+        tsconfig: "../tsconfig.json",
         docsRoot: "../docs",
-        mode: "file",
         readme: "none",
         name: `${title} API`,
         includeVersion: true,
-        plugin: ["typedoc-plugin-no-inherit"],
+        plugin: [
+          "typedoc-plugin-merge-modules",
+          "typedoc-plugin-rename-defaults",
+        ],
         sidebar: {
           globalsLabel: "Table of Contents",
         },
