@@ -17,7 +17,7 @@
     "clsx": "^1.1.1"
   },
   "devDependencies": {
-    "docusaurus-plugin-typedoc": "^0.10.0",
+    "docusaurus-plugin-typedoc": "^0.11.0",
     "typedoc": "^0.20.29",
     "typedoc-plugin-markdown": "^3.6.0",
     "typedoc-plugin-merge-modules": "^1.0.0",
