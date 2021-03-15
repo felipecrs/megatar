@@ -8,7 +8,10 @@ import Image from "../../model/image";
 export default class SaveImage extends Command {
   static description = "list the docker images found in a helm chart";
 
-  static examples = ["$ megatar chart list-images jenkins/jenkins"];
+  static examples = [
+    "$ megatar chart:list-images jenkins/jenkins",
+    "$ megatar chart:list-images https://github.com/jenkinsci/helm-charts/releases/download/jenkins-3.2.4/jenkins-3.2.4.tgz",
+  ];
 
   static flags = {
     help: flags.help({ char: "h" }),
@@ -18,7 +21,8 @@ export default class SaveImage extends Command {
     {
       name: "charts",
       required: true,
-      description: "the charts to find the images from",
+      description:
+        "the charts to find the images from (can be any value accepted by the helm template command)",
     },
   ];
 
