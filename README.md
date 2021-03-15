@@ -21,7 +21,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.1.1 linux-x64 node-v14.16.0
+megatar/1.1.2 linux-x64 node-v14.16.0
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -78,7 +78,7 @@ EXAMPLE
   $ megatar chart list-images jenkins/jenkins
 ```
 
-_See code: [src/commands/chart/list-images.ts](https://github.com/felipecassiors/megatar/blob/v1.1.1/src/commands/chart/list-images.ts)_
+_See code: [src/commands/chart/list-images.ts](https://github.com/felipecassiors/megatar/blob/v1.1.2/src/commands/chart/list-images.ts)_
 
 ## `megatar help [COMMAND]`
 
@@ -118,5 +118,5 @@ EXAMPLES
   $ megatar save-image hello-world --new-tag test
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.1.1/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.1.2/src/commands/save-image.ts)_
 <!-- commandsstop -->

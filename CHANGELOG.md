@@ -1,3 +1,15 @@
+### [1.1.2](https://github.com/felipecassiors/megatar/compare/v1.1.1...v1.1.2) (2021-03-15)
+
+
+### Dependencies
+
+* **deps:** upgrade js-yaml and jsonpath-plus ([c338afc](https://github.com/felipecassiors/megatar/commit/c338afcf36204b181449f0042d89005e752a232a))
+
+
+### Code Refactoring
+
+* **chart:list-images:** use execa sync instead of await ([c5807a7](https://github.com/felipecassiors/megatar/commit/c5807a7540297f1ba1e45ea9abccd6e29a0fd514))
+
 ### [1.1.1](https://github.com/felipecassiors/megatar/compare/v1.1.0...v1.1.1) (2021-03-15)
 
 
