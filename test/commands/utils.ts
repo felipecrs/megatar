@@ -6,8 +6,7 @@ const bin = getBinPathSync();
 export const runCommand = (
   commandLine: string,
   options?: execa.SyncOptions
-): execa.ExecaSyncReturnValue => {
-  return execa.commandSync(`${bin} ${commandLine}`, {
+): execa.ExecaSyncReturnValue =>
+  execa.commandSync(`${bin} ${commandLine}`, {
     ...options,
   });
-};
