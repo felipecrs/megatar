@@ -31,7 +31,7 @@ export default class SaveImage extends Command {
 
     for (const chart of charts) {
       templates.push(
-        ...(await execa.command(`helm template ${chart}`)).stdout.split("---")
+        ...execa.commandSync(`helm template ${chart}`).stdout.split("---")
       );
     }
 
