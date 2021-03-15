@@ -1,3 +1,11 @@
+### [1.0.8](https://github.com/felipecassiors/megatar/compare/v1.0.7...v1.0.8) (2021-03-15)
+
+
+### Dependencies
+
+* **deps:** bump @docusaurus/core from 2.0.0-alpha.70 to 2.0.0-alpha.71 ([#171](https://github.com/felipecassiors/megatar/issues/171)) ([e177546](https://github.com/felipecassiors/megatar/commit/e17754677f7e547bdf7bde1e1fd4a77aae00d24a))
+* **deps:** bump @docusaurus/preset-classic ([#172](https://github.com/felipecassiors/megatar/issues/172)) ([bd3619e](https://github.com/felipecassiors/megatar/commit/bd3619ef9e58974459508f4e3cf26ba4eb6437b4))
+
 ### [1.0.7](https://github.com/felipecassiors/megatar/compare/v1.0.6...v1.0.7) (2021-03-04)
 
 

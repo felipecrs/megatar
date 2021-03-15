@@ -21,7 +21,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.0.7 linux-x64 node-v12.21.0
+megatar/1.0.8 linux-x64 node-v14.16.0
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -97,5 +97,5 @@ EXAMPLES
   $ megatar save-image hello-world --new-tag test
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.7/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.0.8/src/commands/save-image.ts)_
 <!-- commandsstop -->
