@@ -19,6 +19,7 @@ describe(command, () => {
 
   afterEach(() => {
     dir.removeCallback();
+    shell.cd("-");
   });
 
   it("saves an image without tag", () => {
@@ -72,7 +73,7 @@ describe(command, () => {
   it("fails when saving an unexisting image", () => {
     const image = "hello-world:123456";
 
-    const result = runCommand(`${command} ${image}`);
+    const result = runCommand(`${command} ${image}`, { reject: false });
 
     expect(result.stdout).toContain(
       `Error response from daemon: manifest for ${image} not found: manifest unknown: manifest unknown`

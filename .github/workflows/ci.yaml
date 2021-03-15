@@ -20,15 +20,16 @@ jobs:
           - 10
           - 12
           - 14
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v2
+      - uses: azure/setup-helm@v1
       - uses: volta-cli/action@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - uses: azure/setup-helm@v1
-      - run: npm test || true # temporary workaround
+      - run: npm test
 
   release:
     runs-on: ubuntu-latest
