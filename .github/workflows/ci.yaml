@@ -2,9 +2,13 @@ name: ci
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+      - next
   pull_request:
-    branches: [master]
+    branches:
+      - master
+      - next
 
 jobs:
   test:
@@ -16,9 +20,11 @@ jobs:
           - 10
           - 12
           - 14
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v2
+      - uses: azure/setup-helm@v1
       - uses: volta-cli/action@v1
         with:
           node-version: ${{ matrix.node-version }}
