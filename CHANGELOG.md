@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/felipecassiors/megatar/compare/v1.1.2...v1.2.0) (2021-03-15)
+
+
+### Features
+
+* **charts:** add list-images command ([#174](https://github.com/felipecassiors/megatar/issues/174)) ([224625b](https://github.com/felipecassiors/megatar/commit/224625be16797eaf92d952821f8c7c9de0d2a6c3)), closes [#122](https://github.com/felipecassiors/megatar/issues/122) [#122](https://github.com/felipecassiors/megatar/issues/122) [#171](https://github.com/felipecassiors/megatar/issues/171) [#172](https://github.com/felipecassiors/megatar/issues/172) [#153](https://github.com/felipecassiors/megatar/issues/153) [#145](https://github.com/felipecassiors/megatar/issues/145)
+
+
+### Bug Fixes
+
+* **chart:list-images:** enhance help function and examples ([75fec80](https://github.com/felipecassiors/megatar/commit/75fec80eb03d49891731dc16bb9ac88902fad5b9))
+
 ### [1.1.2](https://github.com/felipecassiors/megatar/compare/v1.1.1...v1.1.2) (2021-03-15)
 
 

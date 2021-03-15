@@ -21,7 +21,7 @@ $ npm install -g megatar
 $ megatar COMMAND
 running command...
 $ megatar (-v|--version|version)
-megatar/1.1.2 linux-x64 node-v14.16.0
+megatar/1.2.0 linux-x64 node-v14.16.0
 $ megatar --help [COMMAND]
 USAGE
   $ megatar COMMAND
@@ -69,16 +69,17 @@ USAGE
   $ megatar chart:list-images CHARTS
 
 ARGUMENTS
-  CHARTS  the charts to find the images from
+  CHARTS  the charts to find the images from (can be any value accepted by the helm template command)
 
 OPTIONS
   -h, --help  show CLI help
 
-EXAMPLE
-  $ megatar chart list-images jenkins/jenkins
+EXAMPLES
+  $ megatar chart:list-images jenkins/jenkins
+  $ megatar chart:list-images https://github.com/jenkinsci/helm-charts/releases/download/jenkins-3.2.4/jenkins-3.2.4.tgz
 ```
 
-_See code: [src/commands/chart/list-images.ts](https://github.com/felipecassiors/megatar/blob/v1.1.2/src/commands/chart/list-images.ts)_
+_See code: [src/commands/chart/list-images.ts](https://github.com/felipecassiors/megatar/blob/v1.2.0/src/commands/chart/list-images.ts)_
 
 ## `megatar help [COMMAND]`
 
@@ -118,5 +119,5 @@ EXAMPLES
   $ megatar save-image hello-world --new-tag test
 ```
 
-_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.1.2/src/commands/save-image.ts)_
+_See code: [src/commands/save-image.ts](https://github.com/felipecassiors/megatar/blob/v1.2.0/src/commands/save-image.ts)_
 <!-- commandsstop -->
