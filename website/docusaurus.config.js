@@ -57,7 +57,6 @@ module.exports = {
         includeVersion: true,
         plugin: [
           "typedoc-plugin-merge-modules",
-          "typedoc-plugin-rename-defaults",
         ],
         sidebar: {
           globalsLabel: "Table of Contents",
