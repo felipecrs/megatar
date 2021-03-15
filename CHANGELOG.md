@@ -4,6 +4,27 @@
 ### Features
 
 * **charts:** add list-images command ([#122](https://github.com/felipecassiors/megatar/issues/122)) ([34793d3](https://github.com/felipecassiors/megatar/commit/34793d374d1afd6dd12e818a26464f9de80e5eb8))
+### [1.0.8](https://github.com/felipecassiors/megatar/compare/v1.0.7...v1.0.8) (2021-03-15)
+
+
+### Dependencies
+
+* **deps:** bump @docusaurus/core from 2.0.0-alpha.70 to 2.0.0-alpha.71 ([#171](https://github.com/felipecassiors/megatar/issues/171)) ([e177546](https://github.com/felipecassiors/megatar/commit/e17754677f7e547bdf7bde1e1fd4a77aae00d24a))
+* **deps:** bump @docusaurus/preset-classic ([#172](https://github.com/felipecassiors/megatar/issues/172)) ([bd3619e](https://github.com/felipecassiors/megatar/commit/bd3619ef9e58974459508f4e3cf26ba4eb6437b4))
+
+### [1.0.7](https://github.com/felipecassiors/megatar/compare/v1.0.6...v1.0.7) (2021-03-04)
+
+
+### Dependencies
+
+* **deps:** bump @oclif/plugin-help from 3.2.1 to 3.2.2 ([#153](https://github.com/felipecassiors/megatar/issues/153)) ([322ec7e](https://github.com/felipecassiors/megatar/commit/322ec7e16f83c9ca247f41343de980c07dd268d5))
+
+### [1.0.6](https://github.com/felipecassiors/megatar/compare/v1.0.5...v1.0.6) (2021-03-04)
+
+
+### Dependencies
+
+* **deps:** bump tslib from 2.0.3 to 2.1.0 ([#145](https://github.com/felipecassiors/megatar/issues/145)) ([8128569](https://github.com/felipecassiors/megatar/commit/8128569bcffcf025562a216180199484ff84fb8c))
 
 ### [1.0.5](https://github.com/felipecassiors/megatar/compare/v1.0.4...v1.0.5) (2021-01-06)
 

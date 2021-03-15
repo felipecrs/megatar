@@ -6,3 +6,9 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "@types/node"
+        versions:
+          - ">=11"
+      - dependency-name: "husky"
+        versions:
+          - ">=5"
+    open-pull-requests-limit: 15

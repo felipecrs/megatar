@@ -1,10 +1,12 @@
-const organizationName = "felipecrs"
-const projectName = "megatar"
+const organizationName = "felipecrs";
+const projectName = "megatar";
 const githubUrl = `https://github.com/${organizationName}/${projectName}`;
+const title = "Megatar";
+const description = require("../package.json").description;
 
 module.exports = {
-  title: "Megatar",
-  tagline: "Full offline Helm chart packages.",
+  title,
+  tagline: description,
   url: `https://${organizationName}.github.io/`,
   baseUrl: `/${projectName}/`,
   onBrokenLinks: "throw",
@@ -13,7 +15,7 @@ module.exports = {
   projectName,
   themeConfig: {
     navbar: {
-      title: "Megatar",
+      title,
       items: [
         {
           href: githubUrl,
@@ -32,8 +34,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          path: '../docs',
-          routeBasePath: '/',
+          path: "../docs",
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: `${githubUrl}/edit/master/website`,
         },
@@ -45,12 +47,20 @@ module.exports = {
   ],
   plugins: [
     [
-      'docusaurus-plugin-typedoc',
+      "docusaurus-plugin-typedoc",
       {
-        inputFiles: ['../src/'],
-        docsRoot: '../docs',
-        mode: "file",
-        readme: "none"
+        entryPoints: ["../src/"],
+        tsconfig: "../tsconfig.json",
+        docsRoot: "../docs",
+        readme: "none",
+        name: `${title} API`,
+        includeVersion: true,
+        plugin: [
+          "typedoc-plugin-merge-modules",
+        ],
+        sidebar: {
+          globalsLabel: "Table of Contents",
+        },
       },
     ],
   ],
