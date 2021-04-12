@@ -1,3 +1,11 @@
+### [1.2.1](https://github.com/felipecassiors/megatar/compare/v1.2.0...v1.2.1) (2021-04-12)
+
+
+### Dependencies
+
+* **deps:** bump jsonpath-plus from 5.0.4 to 5.0.7 ([#203](https://github.com/felipecassiors/megatar/issues/203)) ([90a61d6](https://github.com/felipecassiors/megatar/commit/90a61d6484ede21ed0103f3fed4aa9ecb96356d3))
+* **deps:** bump tslib from 2.1.0 to 2.2.0 ([#196](https://github.com/felipecassiors/megatar/issues/196)) ([7103d5e](https://github.com/felipecassiors/megatar/commit/7103d5ec7419354ef5967b4135500175bf36f2be))
+
 ## [1.2.0](https://github.com/felipecassiors/megatar/compare/v1.1.2...v1.2.0) (2021-03-15)
 
 

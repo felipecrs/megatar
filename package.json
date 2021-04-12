@@ -1,7 +1,7 @@
 {
   "name": "megatar",
   "description": "Create full offline Helm chart packages.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Felipe Santos @felipecassiors",
   "homepage": "https://github.com/felipecassiors/megatar#readme",
   "repository": "felipecassiors/megatar",
