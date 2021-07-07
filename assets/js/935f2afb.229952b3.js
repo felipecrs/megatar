@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{77:function(e){e.exports=JSON.parse('{"pluginId":"default","version":"current","label":"Next","isLast":true,"docsSidebars":{"sidebar":[{"type":"link","label":"Introduction","href":"/megatar/"},{"collapsed":true,"type":"category","label":"API","items":[]}]},"permalinkToSidebar":{"/megatar/":"sidebar"}}')}}]);
