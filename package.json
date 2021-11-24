@@ -68,7 +68,7 @@
     "jest": "^26.6.3",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
-    "semantic-release": "^17.3.0",
+    "semantic-release": "^18.0.1",
     "tmp": "^0.2.1",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
