@@ -30,7 +30,7 @@
     "@oclif/config": "^1.17.0",
     "@oclif/plugin-autocomplete": "^0.3.0",
     "@oclif/plugin-help": "^3.2.1",
-    "@oclif/plugin-not-found": "^1.2.4",
+    "@oclif/plugin-not-found": "^2.3.1",
     "chalk": "^4.1.0",
     "execa": "^5.0.0",
     "js-yaml": "^4.0.0",
