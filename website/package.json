@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "docusaurus-plugin-typedoc": "^0.12.1",
-    "typedoc": "^0.20.32",
+    "typedoc": "^0.22.14",
     "typedoc-plugin-markdown": "^3.6.0",
     "typedoc-plugin-merge-modules": "^2.0.0"
   },
